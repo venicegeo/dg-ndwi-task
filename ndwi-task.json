@@ -1,0 +1,33 @@
+{
+    "name": "NDWI_beta",
+    "version": "0.0.1",
+    "description": "Compute NDWI.",
+    "properties": {
+        "isPublic": true,
+        "timeout": 7200
+    },
+    "inputPortDescriptors": [
+        {
+            "name": "image",
+            "type": "directory",
+            "description": "The data.",
+            "required": true
+        }
+    ],
+    "outputPortDescriptors": [
+        {
+            "name": "result",
+            "type": "directory",
+            "description": "NDWI result."
+        }
+    ],
+    "containerDescriptors": [
+        {
+            "type": "DOCKER",
+            "properties": {
+                "image": "venicegeo/ndwi-task"
+            },
+            "command": "python /ndwi-task.py"
+        }
+    ]
+}
