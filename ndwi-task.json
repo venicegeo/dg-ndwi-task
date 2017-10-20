@@ -25,7 +25,7 @@
         {
             "type": "DOCKER",
             "properties": {
-                "image": "venicegeo/ndwi-task"
+                "image": "venicegeo/dg-ndwi-task"
             },
             "command": "python /ndwi-task.py"
         }
